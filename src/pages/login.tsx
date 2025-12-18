@@ -42,7 +42,7 @@ export default function Page() {
           grant_type: "authorization_code",
           client_id: "ome_san",
           code,
-          redirect_uri: "http://localhost:3002",
+          redirect_uri: "https://san-gamma.vercel.app",
         }),
       })
 
