@@ -312,16 +312,16 @@ export default function Page() {
             ) : qrData ? (
               <div className="mb-6">
                 {/* QR Code */}
-                <div className="bg-white p-6 rounded-2xl shadow-lg mb-4 flex items-center justify-center">
+                <div className="bg-white p-10 rounded-2xl w-fit shadow-lg mb-4 flex items-center justify-center mx-auto">
                   <QRCodeSVG value={qrData} size={220} level="H" />
                 </div>
 
                 {/* Timer */}
-                <div className="text-center mb-4">
-                  <p className="text-emerald-300 font-semibold text-sm mb-2">
+                <div className="text-center mb-4 flex items-center justify-center gap-3 bg-emerald-500/10 border border-emerald-500/30 rounded-lg">
+                  <p className="text-emerald-300 font-semibold text-sm">
                     Mã QR hết hạn sau
                   </p>
-                  <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 rounded-lg px-4 py-2">
+                  <div className="inline-flex items-center gap-2  px-4 py-2">
                     <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
                     <span className="text-white font-bold text-lg">
                       {Math.floor(qrExpiresIn / 60)}:{String(qrExpiresIn % 60).padStart(2, '0')}
